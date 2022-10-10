@@ -34,11 +34,6 @@ public class Calculator
         return true;
     }
 
-    private void PrintResult(float result)
-    {
-        Console.WriteLine("The result is {0}", result.ToString("n2"));
-    }
-
     public float Solve(int operand, float input1, float input2)
     {
         float result;
@@ -62,6 +57,11 @@ public class Calculator
         }
 
         return result;
+    }
+
+    private void PrintResult(float result)
+    {
+        Console.WriteLine("The result is {0}", result.ToString("n2"));
     }
 
     private void PrintInvalidInput()
