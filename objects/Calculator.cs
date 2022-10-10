@@ -76,8 +76,8 @@ public class Calculator
         for (int i = 1; i <= 4; i++)
         {
             Operator operand = (Operator)i;
-            String operandStr = operand.ToString();
-            operandStr = operandStr[0] + operandStr.Substring(1).ToLower();
+            String operandStr = operand.ToString(); // ex: ADD
+            operandStr = operandStr[0] + operandStr.Substring(1).ToLower(); // Add
             Console.WriteLine("Press {0} for {1}", i, operandStr);
         }
     }
