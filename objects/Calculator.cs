@@ -11,19 +11,11 @@ public class Calculator
     {
         float operand, input1, input2;
         PrintInstruction();
-        if (!WaitForInput(null, out operand) || operand < 1 || operand > 5)
-        {
-            PrintInvalidInput();
-            return false;
-        }
-
-        if (!WaitForInput("Enter 1st input", out input1))
-        {
-            PrintInvalidInput();
-            return false;
-        }
-
-        if (!WaitForInput("Enter 2st input", out input2))
+        if (
+            !WaitForInput(null, out operand) || operand < 1 || operand > 5 ||
+            !WaitForInput("Enter 1st input", out input1) ||
+            !WaitForInput("Enter 2st input", out input2)
+        )
         {
             PrintInvalidInput();
             return false;
