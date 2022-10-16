@@ -8,6 +8,10 @@
         {
             Console.Clear();
             isFinished = calc.Run();
+            if(!isFinished) {
+                // stay on invalid
+                Console.ReadLine();
+            }
         } while (!isFinished);
     }
 }
